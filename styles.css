@@ -1,8 +1,27 @@
+/* RESET */
 body{
     margin: 0;
     padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
 }
-nav ul {
+nav ul{
     list-style: none;
     padding: 0;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto; 
+}
+*{
+    box-sizing: border-box;
+}
+/* AHORA VAMOS CON LAS VARIABLES ROOT */
+:root {
+    --bg: #7ec8e3;
+    --accent: #0055cc;
+    --accent2: #f7df1e;
+    --text: #000000;
+    --muted: #5a6b7a;
 }
