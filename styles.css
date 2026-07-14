@@ -1,3 +1,11 @@
+/* AHORA VAMOS CON LAS VARIABLES ROOT */
+:root {
+    --bg: #7ec8e3;
+    --accent: #0055cc;
+    --accent2: #f7df1e;
+    --text: #000000;
+    --muted: #5a6b7a;
+}
 /* RESET */
 body{
     margin: 0;
@@ -17,11 +25,10 @@ img{
 *{
     box-sizing: border-box;
 }
-/* AHORA VAMOS CON LAS VARIABLES ROOT */
-:root {
-    --bg: #7ec8e3;
-    --accent: #0055cc;
-    --accent2: #f7df1e;
-    --text: #000000;
-    --muted: #5a6b7a;
+/* ACTO SEGUIDO VAMOS A HACER LOS ESTILOS GENERALES DE LA PAGINA */
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    
 }
