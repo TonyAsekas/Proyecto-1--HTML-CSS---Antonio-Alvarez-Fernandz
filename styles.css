@@ -63,11 +63,13 @@ header {
 }
 /* AHORA VAMOS CON LAS SECCIONES DE LA PAGINA */
 #sobre-mi, #experiencia, #proyectos, #contacto {
-    padding: 50px;
-    text-align: center;
+    padding: 10px;
+    text-align: left;
     font-family:'tahoma', sans-serif;
     background-color: var(--card);
     margin: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--text);
 }
 /* ENLACES */
 a {
