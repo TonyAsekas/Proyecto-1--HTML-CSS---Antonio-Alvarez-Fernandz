@@ -36,8 +36,8 @@ img {
 a {
     text-decoration: none;
     color: var(--text);
-    font-size: 20px;
-    font-family: 'tahoma', sans-serif;
+    font-size: 1rem;
+    font-family: inherit;
 }
 
 /* ==========================================================================
@@ -125,8 +125,14 @@ header nav a:hover::after {
 }
 
 /* ==========================================================================
-   3. ESTRUCTURA GLOBAL (GRID & TARJETAS)
+   3. ESTRUCTURA GLOBAL (MAIN, GRID & TARJETAS)
    ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 .grid-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -137,9 +143,9 @@ header nav a:hover::after {
 .tarjeta-contacto {
     border: 1px solid rgba(26, 26, 26, 0.12);
     border-radius: 20px;
-    padding: 35px;
-    box-shadow: 0 10px 25px rgba(26, 26, 26, 0.1),
-                0 4px 10px rgba(26, 26, 26, 0.06);
+    padding: 30px;
+    background-color: var(--card);
+    box-shadow: 0 10px 25px rgba(26, 26, 26, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
@@ -147,18 +153,7 @@ header nav a:hover::after {
 .grid-content > section:hover,
 .tarjeta-contacto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 18px 36px rgba(26, 26, 26, 0.16),
-                0 6px 16px rgba(26, 26, 26, 0.1);
-}
-
-#sobre-mi, #experiencia, #proyectos, #contacto {
-    padding: 10px;
-    text-align: left;
-    font-family: 'tahoma', sans-serif;
-    background-color: var(--card);
-    margin: 30px;
-    border-radius: 10px;
-    border: 2px solid var(--text);
+    box-shadow: 0 18px 36px rgba(26, 26, 26, 0.16);
 }
 
 /* ==========================================================================
@@ -172,8 +167,7 @@ header nav a:hover::after {
     border: 1px solid rgba(26, 26, 26, 0.12);
     border-radius: 20px;
     padding: 35px;
-    margin: 30px auto;
-    max-width: 1000px;
+    margin: 20px auto 30px auto;
     box-shadow: 0 10px 25px rgba(26, 26, 26, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -274,9 +268,11 @@ header nav a:hover::after {
     border-top: 1px solid #e0e0e0;
 }
 
+.skills-container h3,
 .skills-container h4 {
     margin-bottom: 15px;
     font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .skill-item {
@@ -357,14 +353,13 @@ header nav a:hover::after {
    8. SECCIÓN CONTACTO Y FORMULARIO
    ========================================================================== */
 #contacto, .tarjeta-contacto {
-    grid-column: 1 / -1;
-    justify-self: center;
+    grid-column: span 2;
     width: 100%;
-    max-width: 600px;
     background-color: #fcfbfa;
 }
 
 .form-contacto {
+    width: 100%;
     max-width: 600px;
     margin: 20px auto 0 auto;
     display: flex;
@@ -419,7 +414,7 @@ header nav a:hover::after {
 }
 
 /* ==========================================================================
-   9. BOTONES Y REDES SOCIALES
+   9. BOTONES Y FOOTER
    ========================================================================== */
 .btn-proyecto,
 .btn-cv,
@@ -469,13 +464,19 @@ header nav a:hover::after {
     color: #1a1a1a;
 }
 
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
 .redes-sociales {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    margin-bottom: 15px;
 }
 
 .social-github { background-color: #24292e; color: #ffffff; }
@@ -495,10 +496,14 @@ header nav a:hover::after {
    10. ADAPTACIÓN PARA MÓVILES (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
     header {
         flex-direction: column;
         gap: 12px;
-        padding: 12px 15px;
+        padding: 15px 10px;
     }
 
     header nav ul {
@@ -510,7 +515,8 @@ header nav a:hover::after {
     .tarjeta-hero {
         flex-direction: column;
         text-align: center;
-        padding: 25px;
+        padding: 20px;
+        margin: 10px 0 20px 0;
         gap: 20px;
     }
 
@@ -520,9 +526,8 @@ header nav a:hover::after {
     }
 
     .foto-perfil {
-        width: 100%;
-        max-width: 260px;
-        height: auto;
+        width: 180px;
+        height: 180px;
     }
 
     .hero-acciones {
@@ -531,22 +536,33 @@ header nav a:hover::after {
     }
 
     .grid-content {
-        grid-template-columns: 1fr !important;
-        padding: 10px;
-        gap: 20px;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    #contacto, .tarjeta-contacto {
+    .grid-content > section,
+    .tarjeta-contacto {
+        padding: 20px;
+        margin: 0;
+    }
+
+    #sobre-mi,
+    #proyectos,
+    #contacto, 
+    .tarjeta-contacto {
         grid-column: span 1 !important;
-        padding: 22px;
+        grid-row: auto !important;
     }
 
-    .form-row {
-        flex-direction: column;
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
+    .form-row,
     .form-botones {
         flex-direction: column;
+        gap: 10px;
     }
 
     .form-botones button {
@@ -557,9 +573,4 @@ header nav a:hover::after {
         flex-direction: column;
         align-items: stretch;
     }
-
-    .proyectos-grid {
-        grid-template-columns: 1fr !important;
-    }
 }
-
