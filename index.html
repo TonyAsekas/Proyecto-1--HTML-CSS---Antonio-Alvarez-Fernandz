@@ -7,12 +7,21 @@
     <meta name="keywords" content="Full Stack Developer, DAM, Portfolio, Antonio Álvarez Fernández">
     <meta name="description" content="Portfolio personal de Antonio Álvarez Fernández, estudiante de DAM y Master en Full Stack Developer">
     <link rel="icon" type="image/png" href="logos/logo-perfil.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Antonio Álvarez Fernández</title>
 </head>
 <body>
     <header>
-        <span> AAF/ </span>
+        <a href="#" class="logo-container" aria-label="Inicio - Antonio Álvarez Fernández">
+            <svg class="logo-svg" viewBox="0 0 160 50" xmlns="http://www.w3.org/2000/svg">
+                <text x="5" y="36" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" fill="#ffffff" letter-spacing="1">AAF</text>
+                <text x="88" y="36" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="36" fill="#3b82f6">/</text>
+                <circle cx="108" cy="32" r="3.5" fill="#60a5fa" />
+            </svg>
+        </a>
         <nav>
             <ul>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -21,45 +30,52 @@
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-        </header>
-        <main>
-            <section id="hero">
+    </header>
+
+    <main>
+        <section id="hero" class="tarjeta-hero">
+            <div class="hero-imagen-container">
                 <img src="img/foto-perfil-azul.png" alt="Foto de perfil de Antonio Álvarez Fernández" class="foto-perfil">
-             <h1 class="nombre">Antonio Álvarez Fernández</h1>
-             <h2 class="profesion">Estudiante DAM y Master en Full Stack Developer</h2>
-             </section>
-             <div class="grid-content">
-             <section id="sobre-mi">
+            </div>
+            <div class="hero-contenido">
+                <span class="badge-status">🟢 Disponible para proyectos y prácticas</span>
+                <h1 class="nombre">Antonio Álvarez Fernández</h1>
+                <h2 class="profesion">Estudiante DAM & Full Stack Developer</h2>
+                <p class="hero-bio">Apasionado por la tecnología, el código y la resolución de problemas. Del sector industrial a la programación full stack.</p>
+                <div class="hero-acciones">
+                    <a href="documents/cv-antonio-alvarez-fdez.pdf" download class="btn-proyecto">Descargar CV</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid-content">
+            <section id="sobre-mi">
                 <h2>Sobre mí.</h2>
-                <p>Hola! En este pequeño espacio voy a contaros un poco el cómo soy y cómo he acabado en este mundillo que a todos nos fascina.</p>
-                <p> Soy un chico de 30 años que empezó a trabajar a los 17 años en pequeños trabajos, buscando mi camino y mi lugar en el mundo.
-                    Desde entonces he pasado por varios oficios distintos: soldador, camarero, atención al cliente, repartidor... hasta donde estoy ahora mismo mientras me formo, comercial telefónico de recambios de automóviles.</p>
-                   <p> Siempre me he considerado una persona curiosa, de las que le gusta entender cómo funcionan las cosas por dentro, hasta el punto que un día un compañero me enseñó el mundo de la programación y me fascinó, desde entonces no he parado de aprender y de formarme en este mundillo que me apasiona.
-                    Todavía recuerdo las primeras líneas de código que conseguí escribir y que funcionaban, la sensación de "lo he conseguido yo" me enganchó a niveles estratosféricos.</p>
-                   <p> De todos esos años trabajando y aprendiendo, he sacado una serie de valores que me definen como persona y que me han ayudado a crecer y a ser la persona que soy hoy en día:</p>
-                    <ul>
-                        <li>Ser resolutivo y trabajar bajo presión.</li>
-                        <li>Ser colaborativo y trabajar en equipo, escuchando y apoyando a mis compañeros.</li>
-                        <li>Ser constante en lo que hago y no decaer.</li>
-                        <li>Adaptarme a cambios y situaciones según pida el momento.</li>
-                       <li>Aprender de los errores y no tener miedo a equivocarme.</li>
-                       <li>Tener iniciativa.</li>
-                    
-                    </ul>
-                    <p>Son pequeñas cosas que, aunque no se puedan demostrar en un CV técnico, marcan la diferencia en el día a día.</p>
-                    <p> Hoy día, estoy estudiando un CFGS de Desarrollo de Aplicaciones Multiplataforma y un Master en Full Stack Developer, con el objetivo de poder dedicarme profesionalmente a este mundillo que me apasiona.
-                    Lo que más disfruto de esto es sentarme frente al ordenador a programar y ver cómo poco a poco voy dando forma a mis ideas, a mis proyectos, a mis sueños hasta hacerlos funcionar.</p>
-                   <p> En este portfolio voy a ir mostrando mis proyectos, mis avances y mis logros, espero que os guste y que os sirva para conocerme un poco mejor.</p>
-                  
-                   <div class ="skills-container">
+                <p>Hola! En este pequeño espacio voy a contaros un poco el cómo soy y cómo he acabado en este mundillo que a todos nos fasciná.</p>
+                <p>Soy un chico de 30 años que empezó a trabajar a los 17 años en pequeños trabajos, buscando mi camino y mi lugar en el mundo. Desde entonces he pasado por varios oficios distintos: soldador, camarero, atención al cliente, repartidor... hasta donde estoy ahora mismo mientras me formo, comercial telefónico de recambios de automóviles.</p>
+                <p>Siempre me he considerado una persona curiosa, de las que le gusta entender cómo funcionan las cosas por dentro, hasta el punto que un día un compañero me enseñó el mundo de la programación y me fascinó, desde entonces no he parado de aprender y de formarme en este mundillo que me apasiona. Todavía recuerdo las primeras líneas de código que conseguí escribir y que funcionaban, la sensación de "lo he conseguido yo" me enganchó a niveles estratosféricos.</p>
+                <p>De todos esos años trabajando y aprendiendo, he sacado una serie de valores que me definen como persona y que me han ayudado a crecer y a ser la persona que soy hoy en día:</p>
+                <ul>
+                    <li>Ser resolutivo y trabajar bajo presión.</li>
+                    <li>Ser colaborativo y trabajar en equipo, escuchando y apoyando a mis compañeros.</li>
+                    <li>Ser constante en lo que hago y no decaer.</li>
+                    <li>Adaptarme a cambios y situaciones según pida el momento.</li>
+                    <li>Aprender de los errores y no tener miedo a equivocarme.</li>
+                    <li>Tener iniciativa.</li>
+                </ul>
+                <p>Son pequeñas cosas que, aunque no se puedan demostrar en un CV técnico, marcan la diferencia en el día a día.</p>
+                <p>Hoy día, estoy estudiando un CFGS de Desarrollo de Aplicaciones Multiplataforma y un Master en Full Stack Developer, con el objetivo de poder dedicarme profesionalmente a este mundillo que me apasiona. Lo que más disfruto de esto es sentarme frente al ordenador a programar y ver cómo poco a poco voy dando forma a mis ideas, a mis proyectos, a mis sueños hasta hacerlos funcionar.</p>
+                <p>En este portfolio voy a ir mostrando mis proyectos, mis avances y mis logros, espero que os guste y que os sirva para conocerme un poco mejor.</p>
+                
+                <div class="skills-container">
                     <h3>Habilidades.</h3>
                     <div class="skill-item">
-                         <div class="skill-info">
+                        <div class="skill-info">
                             <span>HTML / CSS</span>
                             <span>60%</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill html-css"></div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill html-css"></div>
                         </div>
                     </div>
                     <div class="skill-item">
@@ -78,138 +94,125 @@
                         </div>
                         <div class="progress-bar">
                             <div class="progress-fill java"></div>
-                            </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Git / Github</span>
-                                <span>70%</span>
-                            </div>
-                            <div class = "progress-bar">
-                                <div class ="progress-fill git"></div>
-                            </div>
-                            </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span>Git / Github</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill git"></div>
+                        </div>
+                    </div>
+                </div>
             </section>
+
             <section id="experiencia">
                 <h2>Formación.</h2>
                 <article>
                     <h3>CFGS de Desarrollo de Aplicaciones Multiplataforma</h3>
                     <p>ThePowerFP Prometeo (2025 - Actualidad)</p>
-                    <p>Actualmente estoy cursando el CFGS de Desarrollo de Aplicaciones Multiplataforma en ThePowerFP Prometeo, donde estoy aprendiendo a desarrollar aplicaciones para diferentes plataformas y dispositivos.
-                        En este nos centramos en lenguajes como HTML, CSS, JAVA, JAVAFX, SQL, entre otros, así como en el uso de frameworks y librerías en los IDEs IntelliJ y VSCode.
-                         Además, estamos trabajando en proyectos prácticos que nos permiten aplicar los conocimientos adquiridos y desarrollar nuestras habilidades como desarrolladores de software.
-                    </p>
+                    <p>Actualmente estoy cursando el CFGS de Desarrollo de Aplicaciones Multiplataforma en ThePowerFP Prometeo, donde estoy aprendiendo a desarrollar aplicaciones para diferentes plataformas y dispositivos. En este nos centramos en lenguajes como HTML, CSS, JAVA, JAVAFX, SQL, entre otros, así como en el uso de frameworks y librerías en los IDEs IntelliJ y VSCode. Además, estamos trabajando en proyectos prácticos que nos permiten aplicar los conocimientos adquiridos y desarrollar nuestras habilidades como desarrolladores de software.</p>
                 </article>
                 <article>
                     <h3>Master en Full Stack Developer</h3>
                     <p>ThePowerFP Prometeo (2025 - Actualidad)</p>
-                    <p>En este Máster estoy profundizando en el desarrollo full stack, donde combino el conocimiento de frontend y backend, estamos utilizando lenguajes como JavaScript, Python, HTML5, CSS, SQL, NoSQL.
-                        El segundo año vamos a centrarnos en lenguajes como TypeScript, NextJS, NodeJS, Angular, React Native e IONIC.
-                        Todos estos lenguajes hechos en base a práctica, teoría y proyectos reales, para poder adquirir experiencia y habilidades.</p>
+                    <p>En este Máster estoy profundizando en el desarrollo full stack, donde combino el conocimiento de frontend y backend, estamos utilizando lenguajes como JavaScript, Python, HTML5, CSS, SQL, NoSQL. El segundo año vamos a centrarnos en lenguajes como TypeScript, NextJS, NodeJS, Angular, React Native e IONIC. Todos estos lenguajes hechos en base a práctica, teoría y proyectos reales, para poder adquirir experiencia y habilidades.</p>
                 </article>
+
                 <h2>Experiencia Laboral.</h2>
                 <article>
-                   <h3>Camarero de eventos y festivales</h3>
-                   <p>(2015 - 2016)</p>
-                   <p>En mis inicios laborales trabajé como camarero en diversos eventos y festivales. Lo que me enseñó a trabajar de cara al público, aprender el trato con los clientes, a ser resolutivo bajo presión y trabajar en equipo.</p>
-                 </article>
-                 <article>
+                    <h3>Camarero de eventos y festivales</h3>
+                    <p>(2015 - 2016)</p>
+                    <p>En mis inicios laborales trabajé como camarero en diversos eventos y festivales. Lo que me enseñó a trabajar de cara al público, aprender el trato con los clientes, a ser resolutivo bajo presión y trabajar en equipo.</p>
+                </article>
+                <article>
                     <h3>Peón Especialista</h3>
                     <p>Lo fui en dos ocasiones en dos oficios diferentes:</p>
-                        <ul>
-                            <li>En la empresa "Sondeos y Perforaciones Industriales del Bierzo" en el sector de la minería (2017 - 2020)</li>
-                            <li>Para la empresa "Daorje" como soldador en ArcelorMittal (2021 - 2022)</li>
-                        </ul>
-                        <p>En estas empresas pude trabajar con grandes equipos que me enseñaron a colaborar, adaptarme a cambios y mantener una comunicación efectiva.</p>
-                    </article>
-                  <article>
+                    <ul>
+                        <li>En la empresa "Sondeos y Perforaciones Industriales del Bierzo" en el sector de la minería (2017 - 2020)</li>
+                        <li>Para la empresa "Daorje" como soldador en ArcelorMittal (2021 - 2022)</li>
+                    </ul>
+                    <p>En estas empresas pude trabajar con grandes equipos que me enseñaron a colaborar, adaptarme a cambios y mantener una comunicación efectiva.</p>
+                </article>
+                <article>
                     <h3>Comercial y atención al cliente</h3>
                     <p>Recalvi Parts S.L - (2024 - Actualmente)</p>
                     <p>En esta posición me dediqué a promocionar productos y servicios de mi empresa, así como a brindar atención al cliente. Desarrollé habilidades en comunicación efectiva, resolución de problemas y trabajo en equipo.</p>
-                  </article>
-                  <a href="documents/cv-antonio-alvarez-fdez.pdf" download class="btn-cv">Descargar CV</a>
+                </article>
             </section>
+
             <section id="proyectos">
                 <h2>Proyectos.</h2>
-
                 <div class="proyectos-grid">
                     <article>
-                    <h3> Aplicación de Gestión de Tareas</h3>
-                    <p>Una aplicación web que permite a los usuarios crear, editar y eliminar tareas, así como organizarlas por categorías y prioridades.</p>
-                    <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">Mejor no toques todavía...</a>
-                </article>
-                <article>
-                    <h3> Aplicación de Gestión de Contactos</h3>
-                    <p>Una aplicación web que permite a los usuarios almacenar y gestionar información de contacto, incluyendo nombres, direcciones de correo electrónico y números de teléfono.</p>
-                    <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">No lo intentes, en serio...</a>
-                </article>
-                <article>
-                    <h3> Aplicación de Gestión de Inventario</h3>
-                    <p>Una aplicación web que permite a los usuarios llevar un registro de su inventario, incluyendo productos, cantidades y ubicaciones.</p>
-                    <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">No lo hagas...</a>
-                </article>
-                <article>
-                    <h3> Aplicación de Gestión de Presupuestos</h3>
-                    <p>Una aplicación web que permite a los usuarios crear y gestionar presupuestos, incluyendo ingresos, gastos y categorías.</p>
-                    <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">Tú mismo...</a>
-                </article>
+                        <h3>Aplicación de Gestión de Tareas</h3>
+                        <p>Una aplicación web que permite a los usuarios crear, editar y eliminar tareas, así como organizarlas por categorías y prioridades.</p>
+                        <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">Mejor no toques todavía...</a>
+                    </article>
+                    <article>
+                        <h3>Aplicación de Gestión de Contactos</h3>
+                        <p>Una aplicación web que permite a los usuarios almacenar y gestionar información de contacto, incluyendo nombres, direcciones de correo electrónico y números de teléfono.</p>
+                        <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">No lo intentes, en serio...</a>
+                    </article>
+                    <article>
+                        <h3>Aplicación de Gestión de Inventario</h3>
+                        <p>Una aplicación web que permite a los usuarios llevar un registro de su inventario, incluyendo productos, cantidades y ubicaciones.</p>
+                        <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">No lo hagas...</a>
+                    </article>
+                    <article>
+                        <h3>Aplicación de Gestión de Presupuestos</h3>
+                        <p>Una aplicación web que permite a los usuarios crear y gestionar presupuestos, incluyendo ingresos, gastos y categorías.</p>
+                        <a href="img/error-404-meme.png" class="btn-proyecto" target="_blank">Tú mismo...</a>
+                    </article>
                 </div>
             </section>
+
             <section id="contacto" class="tarjeta-contacto">
-  <h2>Contacto.</h2>
-  
-  <form class="form-contacto">
-    
-    <div class="form-row">
-      <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-      </div>
+                <h2>Contacto.</h2>
+                <form class="form-contacto">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué te puedo ayudar?"></textarea>
+                    </div>
+                    <div class="form-botones">
+                        <button type="submit" class="btn-proyecto">Enviar</button>
+                        <button type="reset" class="btn-secundario">Borrar</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-      </div>
-    </div>
-
-   
-    <div class="form-group">
-      <label for="telefono">Teléfono</label>
-      <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
-    </div>
-
-    
-    <div class="form-group">
-      <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué te puedo ayudar?"></textarea>
-    </div>
-
-    
-    <div class="form-botones">
-      <button type="submit" class="btn-proyecto">Enviar</button>
-      <button type="reset" class="btn-secundario">Borrar</button>
-    </div>
-  </form>
-</section>
-              </div>
-        </main>
-        <footer>
-<div class="redes-sociales">
-  <!-- Botón GitHub -->
-  <a href="https://github.com/TonyAsekas?tab=repositories" target="_blank" class="btn-red social-github">
-    <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" class="icon-social">
-    GitHub
-  </a>
-
-<a href="https://www.linkedin.com/in/antonio-%C3%A1lvarez-fern%C3%A1ndez-03abb53ab/" target="_blank" class="btn-red social-linkedin">
-  <!-- SVG de LinkedIn en línea -->
-  <svg class="icon-social" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-  </svg>
-  LinkedIn
-</a>
-</div>
-           <p>&copy; 2026 Antonio Álvarez Fernández</p>
-        </footer>
-    </body>
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://github.com/TonyAsekas?tab=repositories" target="_blank" class="btn-red social-github">
+                <img src="https://cdn.simpleicons.org/github/white" alt="GitHub" class="icon-social">
+                GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/antonio-%C3%A1lvarez-fern%C3%A1ndez-03abb53ab/" target="_blank" class="btn-red social-linkedin">
+                <svg class="icon-social" viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+                LinkedIn
+            </a>
+        </div>
+        <p>&copy; 2026 Antonio Álvarez Fernández</p>
+    </footer>
+</body>
 </html>
