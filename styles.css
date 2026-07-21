@@ -14,6 +14,13 @@
     box-sizing: border-box;
 }
 
+/* Evita que cualquier elemento fuerce scroll horizontal en móviles */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -36,8 +43,8 @@ img {
 a {
     text-decoration: none;
     color: var(--text);
-    font-size: 20px;
-    font-family: 'tahoma', sans-serif;
+    font-size: 1rem;
+    font-family: inherit;
 }
 
 /* ==========================================================================
@@ -47,6 +54,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,6 +72,10 @@ header span {
     cursor: pointer;
 }
 
+nav {
+    max-width: 100%;
+}
+
 nav ul,
 header nav ul {
     display: flex;
@@ -71,6 +83,7 @@ header nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 header nav a {
@@ -125,40 +138,39 @@ header nav a:hover::after {
 }
 
 /* ==========================================================================
-   3. ESTRUCTURA GLOBAL (GRID & TARJETAS)
+   3. ESTRUCTURA GLOBAL (MAIN, GRID & TARJETAS)
    ========================================================================== */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0;
+}
+
 .grid-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
+    width: 100%;
 }
 
+/* Estilo unificado de tarjetas */
 .grid-content > section,
 .tarjeta-contacto {
-    border: 1px solid rgba(26, 26, 26, 0.12);
-    border-radius: 20px;
+    width: 100%;
+    margin: 0;
+    background-color: var(--card);
+    border: 2px solid var(--text);
+    border-radius: 16px;
     padding: 35px;
-    box-shadow: 0 10px 25px rgba(26, 26, 26, 0.1),
-                0 4px 10px rgba(26, 26, 26, 0.06);
+    box-shadow: 0 10px 25px rgba(26, 26, 26, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
 }
 
 .grid-content > section:hover,
 .tarjeta-contacto:hover {
     transform: translateY(-5px);
-    box-shadow: 0 18px 36px rgba(26, 26, 26, 0.16),
-                0 6px 16px rgba(26, 26, 26, 0.1);
-}
-
-#sobre-mi, #experiencia, #proyectos, #contacto {
-    padding: 10px;
-    text-align: left;
-    font-family: 'tahoma', sans-serif;
-    background-color: var(--card);
-    margin: 30px;
-    border-radius: 10px;
-    border: 2px solid var(--text);
+    box-shadow: 0 18px 36px rgba(26, 26, 26, 0.16);
 }
 
 /* ==========================================================================
@@ -168,12 +180,12 @@ header nav a:hover::after {
     display: flex;
     align-items: center;
     gap: 35px;
+    width: 100%;
     background-color: #ffffff;
-    border: 1px solid rgba(26, 26, 26, 0.12);
+    border: 2px solid var(--text);
     border-radius: 20px;
     padding: 35px;
-    margin: 30px auto;
-    max-width: 1000px;
+    margin: 0 0 30px 0;
     box-shadow: 0 10px 25px rgba(26, 26, 26, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -274,9 +286,11 @@ header nav a:hover::after {
     border-top: 1px solid #e0e0e0;
 }
 
+.skills-container h3,
 .skills-container h4 {
     margin-bottom: 15px;
     font-size: 1.1rem;
+    font-weight: 700;
 }
 
 .skill-item {
@@ -340,7 +354,7 @@ header nav a:hover::after {
 
 .proyectos-grid article {
     background-color: #ffffff;
-    border: 1px solid rgba(26, 26, 26, 0.08);
+    border: 1px solid rgba(26, 26, 26, 0.12);
     border-radius: 14px;
     padding: 22px;
     box-shadow: 0 4px 12px rgba(26, 26, 26, 0.04);
@@ -357,14 +371,13 @@ header nav a:hover::after {
    8. SECCIÓN CONTACTO Y FORMULARIO
    ========================================================================== */
 #contacto, .tarjeta-contacto {
-    grid-column: 1 / -1;
-    justify-self: center;
+    grid-column: span 2;
     width: 100%;
-    max-width: 600px;
     background-color: #fcfbfa;
 }
 
 .form-contacto {
+    width: 100%;
     max-width: 600px;
     margin: 20px auto 0 auto;
     display: flex;
@@ -419,7 +432,7 @@ header nav a:hover::after {
 }
 
 /* ==========================================================================
-   9. BOTONES Y REDES SOCIALES
+   9. BOTONES Y FOOTER
    ========================================================================== */
 .btn-proyecto,
 .btn-cv,
@@ -469,13 +482,19 @@ header nav a:hover::after {
     color: #1a1a1a;
 }
 
+footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
 .redes-sociales {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    margin-bottom: 15px;
 }
 
 .social-github { background-color: #24292e; color: #ffffff; }
@@ -492,38 +511,89 @@ header nav a:hover::after {
 }
 
 /* ==========================================================================
-   10. ADAPTACIÓN PARA MÓVILES (MEDIA QUERIES)
+   10. ADAPTACIÓN RESPONSIVA (MÓVILES Y TABLETS < 850px)
    ========================================================================== */
-/* Cuando la ventana mida menos de 900px de ancho, pasa a 1 sola columna */
-@media screen and (max-width: 900px) {
-
-    .grid-content {
-        display: flex;
-        flex-direction: column; /* Apila las secciones una debajo de otra */
-        width: 100%;
+@media screen and (max-width: 850px) {
+    main {
+        width: 92%;
+        margin: 20px auto;
     }
 
-    .grid-content > section,
-    #sobre-mi,
-    #experiencia,
-    #proyectos,
-    #contacto {
-        width: 100%;
-        grid-column: auto !important;
-        grid-row: auto !important;
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 12px;
+        text-align: center;
     }
 
-    .proyectos-grid {
-        grid-template-columns: 1fr; /* Los proyectos también se ponen en 1 columna */
+    header nav ul {
+        gap: 10px 15px;
+        justify-content: center;
+    }
+
+    header nav a {
+        font-size: 0.85rem;
     }
 
     .tarjeta-hero {
         flex-direction: column;
         text-align: center;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+        gap: 20px;
     }
 
     .hero-contenido {
         align-items: center;
         text-align: center;
+    }
+
+    .foto-perfil {
+        width: 160px;
+        height: 160px;
+    }
+
+    .hero-acciones {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .grid-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .grid-content > section,
+    .tarjeta-contacto {
+        padding: 20px 15px;
+    }
+
+    #sobre-mi,
+    #experiencia,
+    #proyectos,
+    #contacto {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .form-row,
+    .form-botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-botones button {
+        width: 100%;
+    }
+
+    .redes-sociales {
+        flex-direction: column;
+        align-items: stretch;
     }
 }
